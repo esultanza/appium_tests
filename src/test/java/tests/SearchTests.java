@@ -34,7 +34,7 @@ class SearchTests extends TestBase {
 
         step("Type search", ()-> {
             $(AccessibilityId("Search Wikipedia")).click();
-            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");
+            $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");
         });
 
         step("Verify content found", ()->
