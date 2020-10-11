@@ -12,9 +12,9 @@ public class CustomMobileDriver implements WebDriverProvider {
 
     @Override
     public WebDriver createDriver(DesiredCapabilities capabilities) {
-        capabilities.setCapability("project", "autotests.cloud");
-        capabilities.setCapability("build", "My First Build");
-        capabilities.setCapability("name", "Bstack-[Java] Sample Test");
+        capabilities.setCapability("project", "Google Pixel");
+        capabilities.setCapability("build", "Android");
+        capabilities.setCapability("name", "Second session");
         capabilities.setCapability("autoGrantPermissions", "true");
         // Not for FREE plan
 //        capabilities.setCapability("browserstack.debug", "true");
@@ -24,7 +24,7 @@ public class CustomMobileDriver implements WebDriverProvider {
 
         capabilities.setCapability("device", "Google Pixel 3");
         capabilities.setCapability("os_version", "9.0");
-        capabilities.setCapability("app", ConfigHelper.getApp());
+        capabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
 
         return new AndroidDriver(getBrowserstackUrl(), capabilities);
     }
