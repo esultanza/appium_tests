@@ -49,7 +49,7 @@ class SearchTests extends TestBase {
 
     @Test
 //    @Disabled("Example without steps")
-    @DisplayName("Tesla search in Wikipedia android app")
+    @DisplayName("Tesla search in Wikipedia android app without steps")
     void WikipediaWithoutSteps() {
         open();
 
@@ -61,7 +61,7 @@ class SearchTests extends TestBase {
 
     @Test
 //    @Disabled("Java + Appium")
-    @DisplayName("Successful search in wikipedia android app")
+    @DisplayName("Clean Java + Appium search in Wikipedia android app")
     void BSappSamsungGalaxyTabTest() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
 
@@ -69,7 +69,7 @@ class SearchTests extends TestBase {
         caps.setCapability("os_version", "9.0");
         caps.setCapability("project", "Samsung Tab");
         caps.setCapability("build", "Android");
-        caps.setCapability("name", "Bstack-[Java] Second Test");
+        caps.setCapability("name", "Java + Appium");
         caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
 
         AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("https://" + ConfigHelper.getUsername() + ":" + ConfigHelper.getPassword() + "@hub-cloud.browserstack.com/wd/hub"), caps);
@@ -78,7 +78,7 @@ class SearchTests extends TestBase {
         searchElement.click();
         AndroidElement insertTextElement = (AndroidElement) new WebDriverWait(driver, 30).until(
                 ExpectedConditions.elementToBeClickable(MobileBy.id("org.wikipedia.alpha:id/search_src_text")));
-        insertTextElement.sendKeys("Tesla");
+        insertTextElement.sendKeys("Great Ring of Civilizations");
         Thread.sleep(5000);
         List<AndroidElement> allProductsName = driver.findElementsByClassName("android.widget.TextView");
         assert (allProductsName.size() > 0);

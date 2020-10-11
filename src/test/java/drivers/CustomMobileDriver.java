@@ -14,7 +14,7 @@ public class CustomMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(DesiredCapabilities capabilities) {
         capabilities.setCapability("project", "Google Pixel");
         capabilities.setCapability("build", "Android");
-        capabilities.setCapability("name", "Second session");
+        capabilities.setCapability("name", "Selenide tests");
         capabilities.setCapability("autoGrantPermissions", "true");
         // Not for FREE plan
 //        capabilities.setCapability("browserstack.debug", "true");
